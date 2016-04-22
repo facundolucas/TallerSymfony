@@ -1,0 +1,4 @@
+services:
+#    first.example:
+#        class: Taller\Bundles\FirstPageBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
