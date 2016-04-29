@@ -1,3 +1,19 @@
 first_homepage:
-    path:     /{name}
+    path:     /
     defaults: { _controller: FirstBundle:Default:index }
+
+second_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FirstBundle:Default:sayHello }
+
+seccion1:
+    path:     /seccion1
+    defaults: { _controller: FirstBundle:Default:seccion1 }
+
+seccion2:
+    path:     /seccion2
+    defaults: { _controller: FirstBundle:Default:seccion2 }
+
+seccion3:
+    path:     /seccion3
+    defaults: { _controller: FirstBundle:Default:seccion3 }

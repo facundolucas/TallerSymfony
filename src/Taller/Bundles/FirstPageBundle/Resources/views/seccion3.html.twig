@@ -1,0 +1,13 @@
+{% extends 'FirstBundle::layout.html.twig' %}
+
+{% block banner %}
+            <p>Seccion 3</p>
+{% endblock %}
+
+{% block contenido %}
+
+               <h2>Seccion 3</h2>
+
+               {{ render(controller('FirstBundle:Default:Usuarios')) }}
+
+{% endblock %}
