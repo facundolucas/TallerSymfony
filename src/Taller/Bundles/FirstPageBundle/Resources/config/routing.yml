@@ -3,8 +3,8 @@ first_homepage:
     defaults: { _controller: FirstBundle:Default:index }
 
 second_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: FirstBundle:Default:sayHello }
+    path:     /hello/{name}.{_format}
+    defaults: { _controller: FirstBundle:Default:sayHello , _format: html }
 
 seccion1:
     path:     /seccion1

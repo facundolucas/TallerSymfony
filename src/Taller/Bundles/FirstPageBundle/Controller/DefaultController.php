@@ -3,6 +3,7 @@
 namespace Taller\Bundles\FirstPageBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -13,9 +14,17 @@ class DefaultController extends Controller
         //return $this->render('FirstBundle:Default:index.html.twig', array('name' => $name));
     }
 
-    public function sayHelloAction($name)
+    public function sayHelloAction($name, $_format)
     {
-        return $this->render('FirstBundle:Default:index.html.twig', array('name' => $name));
+
+        if ($_format == 'json') {
+          $response = new Response(json_encode(array('name' => $name)));
+          $response->headers->set('Content-Type', 'application/json');
+          return $response;
+        }
+
+
+        return $this->render('FirstBundle:Default:index.'.$_format.'.twig', array('name' => $name));
     }
 
     public function seccion1Action()
